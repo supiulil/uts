@@ -1,10 +1,6 @@
-function ucapanSelamat() {
-    var nama = document.getElementById("nama").value;
-    var ucapanDiv = document.getElementById("ucapan");
-
-    if (nama) {
-        ucapanDiv.innerHTML = `<p>Halo ${nama}! Semangat menghadapi ujian!</p>`;
-    } else {
-        ucapanDiv.innerHTML = `<p>Masukkan nama Anda terlebih dahulu.</p>`;
-    }
-}
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nama = document.getElementById('nama').value;
+    const pesan = document.getElementById('pesan');
+    pesan.innerHTML = `<p>Selamat menghadapi UTS, ${nama}! Dari Bengkulu ke Rajabasa.</p><p>Semangat aja dulu, nanti juga bisa.</p>`;
+});
