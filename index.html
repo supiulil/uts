@@ -1,48 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ucapan Selamat Ujian</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-
-        input, button {
-            padding: 10px;
-            margin: 5px;
-            width: 80%;
-        }
-    </style>
+    <title>Ucapan UTS</title>
 </head>
-
 <body>
+    <div class="container">
+        <h1>Selamat Menghadapi UTS</h1>
+        <p>Dari Bengkulu ke Rajabasa.</p>
+        <p>Semangat aja dulu, nanti juga bisa.</p>
+        
+        <form>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required><br><br>
+            <input type="submit" value="Kirim">
+        </form>
+        
+        <div id="pesan"></div>
+    </div>
 
-    <h1>Semoga beruntung</h1>
-
-    <label for="nama">Masukkan Nama Kamu:</label><br>
-    <input type="text" id="nama"><br>
-    <button onclick="ucapanSelamat()">Klik ini</button>
-
-    <div id="ucapan"></div>
-
-    <script>
-        function ucapanSelamat() {
-            var nama = document.getElementById("nama").value;
-            var ucapanDiv = document.getElementById("ucapan");
-
-            if (nama) {
-                ucapanDiv.innerHTML = "<p>Halo " + nama + "! "Selamat menghadapi Ujian Tengah Semester. Jika kamu menangis melihat kertas soal, itu adalah penghinaan. Jika dosenmu menangis saat melihat kertas jawabanmu, itu adalah keberhasilan hehe"!</p>";
-            } else {
-                ucapanDiv.innerHTML = "<p>Silakan masukkan nama Anda.</p>";
-            }
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
